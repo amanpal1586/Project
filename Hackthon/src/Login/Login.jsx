@@ -1,4 +1,5 @@
 import  { useState } from "react";
+import { GoogleLogin} from '@react-oauth/google';
 
 function Login() {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -18,6 +19,8 @@ function Login() {
         >
           {isSignIn ? "Don't have an account? Sign Up" : "Already have an account? Sign In"}
         </button>
+      {/* <button>Sign In with Google</button> */}
+      <GoogleLogin />
       </div>
     </div>
   );
